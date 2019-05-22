@@ -72,7 +72,7 @@ install:
     fi
   fi
 - if [ "$MPI" ]; then
-    pip install petsc4py
+    pip install petsc4py;
   fi
 - pip install testflo
 - pip install coveralls
