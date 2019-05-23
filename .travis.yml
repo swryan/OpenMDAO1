@@ -72,7 +72,10 @@ install:
     fi
   fi
 - if [ "$MPI" ]; then
-    pip install petsc4py==3.5.1;
+    pip install mpi4py;
+    pip install --no-deps git+https://bitbucket.org/petsc/petsc@v3.5;
+    conda install cython --yes;
+    pip install --no-deps git+https://bitbucket.org/petsc/petsc4py@3.5;
   fi
 - pip install testflo
 - pip install coveralls
